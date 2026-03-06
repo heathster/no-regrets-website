@@ -6,7 +6,7 @@
 <title>No Regrets — Make Someday Today</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --cream: #FAF7F2;
@@ -58,16 +58,36 @@
   }
 
   .nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-logo-wordmark {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.03em;
     line-height: 1;
+    white-space: nowrap;
   }
-
   .nav-logo-no  { color: var(--charcoal); }
   .nav-logo-reg { color: var(--amber); }
+  .nav-dot-rule {
+    display: flex; align-items: center;
+    gap: 0.3rem; margin: 0.3rem 0 0.25rem;
+    width: 100%;
+  }
+  .nav-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+  .nav-dot-line { flex: 1; max-width: 38px; height: 1px; background: #D9CFC8; }
+  .nav-logo-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.52rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-grey);
+  }
 
   .nav-cta {
     background: var(--amber);
@@ -803,15 +823,28 @@
   }
 
   .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-logo-wordmark {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.03em;
+    line-height: 1;
+    white-space: nowrap;
   }
-
   .footer-logo-no  { color: rgba(255,255,255,0.85); }
   .footer-logo-reg { color: var(--amber-light); }
+  .footer-dot-rule {
+    display: flex; align-items: center;
+    gap: 0.3rem; margin: 0.3rem 0 0.25rem;
+    width: 100%;
+  }
+  .footer-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--amber-light); flex-shrink: 0; }
+  .footer-dot-line { flex: 1; max-width: 34px; height: 1px; background: rgba(255,255,255,0.15); }
 
   .footer-tagline {
     font-size: 0.82rem;
@@ -895,7 +928,11 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo"><span class="nav-logo-no">No </span><span class="nav-logo-reg">Regrets</span></div>
+  <div class="nav-logo">
+    <div class="nav-logo-wordmark"><span class="nav-logo-no">No </span><span class="nav-logo-reg">Regrets</span></div>
+    <div class="nav-dot-rule"><div class="nav-dot-line"></div><div class="nav-dot"></div><div class="nav-dot-line"></div></div>
+    <span class="nav-logo-tagline">Make someday today</span>
+  </div>
   <a href="#enquire" class="nav-cta">Begin a Conversation</a>
 </nav>
 
@@ -1143,7 +1180,10 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div class="footer-logo"><span class="footer-logo-no">No </span><span class="footer-logo-reg">Regrets</span></div>
+    <div class="footer-logo">
+      <div class="footer-logo-wordmark"><span class="footer-logo-no">No </span><span class="footer-logo-reg">Regrets</span></div>
+      <div class="footer-dot-rule"><div class="footer-dot-line"></div><div class="footer-dot"></div><div class="footer-dot-line"></div></div>
+    </div>
     <p class="footer-tagline">noregrets.today · Melbourne, Australia</p>
     <div class="footer-contact">
       <a href="tel:0414427296" class="footer-phone">
